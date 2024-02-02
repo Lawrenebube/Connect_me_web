@@ -4,6 +4,12 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+body {
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    /* width: 1440px; */
+    /* margin: auto; */
+}
 
 .hero {
     display: grid;
@@ -11,16 +17,33 @@
     place-items: center;
     place-content: center;
     text-align: center;
-    min-height: 100vh;
+    max-height: 100vh;
+    /* height: 100; */
     margin: auto;
-    background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     font-family: 'Lato', sans-serif;
+    /* position: relative; */
 }
+.hero::before { 
+    content: ''; 
+    background: url('./assets/connect_landing_noBG.png')  
+        no-repeat center center/cover; 
+    position: absolute; 
+    opacity: 0.3; 
+    top: -10em; 
+    right: 15px; 
+    width: 45em; 
+    height: 125vh; 
+    transform: rotate(-4deg); 
+    transform-origin: bottom right;
+  
+    z-index: -1; 
+} 
+
 
 .logo {
     height: 7rem;
-    margin-top: 1.1em;
+    margin-top: 4em;
 }
 
 .writeUp {
@@ -28,13 +51,37 @@
 }
 
 @media screen and (max-width:765px) {
+    body {
+        /* width: 375px; */
+    }
     .hero {
-        overflow: hidden;
+        /* overflow: hidden; */
         width: 100vw;
+    }
+    .hero::before { 
+        content: ''; 
+        background: url('./assets/connect_landing_noBG.png')  
+            no-repeat center center/cover; 
+        position: absolute; 
+        opacity: 0.3; 
+        top: -4em; 
+        right: 0px; 
+        width: 100vw; 
+        height: 110vh; 
+        transform: rotate(-1deg); 
+        transform-origin: bottom right;
+        opacity: 0.1;
+        z-index:-1; 
+    } 
+    h1 {
+        font-size: 4rem;
+    }
+    .logo {
+        margin-top: 1em;
     }
 
     .writeUp {
-        width: 23em;
+        width: 22em;
     }
 
     .phoneScan {
@@ -45,12 +92,12 @@
 
 h1 {
     font-weight: 700;
-    font-size: 4.5rem;
+    font-size: 4.6rem;
 }
 
 .hero p {
     font-weight: 100;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     padding-top: 0.5em;
 }
 
@@ -58,7 +105,7 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 1.4em;
-    margin: 1.5em auto 4em;
+    margin: 2em auto;
 }
 
 .hero button {
@@ -75,13 +122,13 @@ button a {
     color: rgb(0, 0, 0);
     font-weight: 300;
     font-size: 1.2rem;
-    padding: 0.5em 0.8em;
+    padding: 0.6em 0.9em;
 }
 .hero button a:hover {
     color: rgb(219, 213, 213);
 }
 
 .phoneScan {
-    width: 27em;
+    height: 22em;
     margin: auto 1.3em;
 }
