@@ -7,22 +7,20 @@
 body {
     background-color: rgb(0, 0, 0);
     overflow: hidden;
-    /* width: 1440px; */
-    /* margin: auto; */
 }
 
 .hero {
+    overflow: hidden;
+
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
     place-content: center;
     text-align: center;
     max-height: 100vh;
-    /* height: 100; */
     margin: auto;
     color: rgb(255, 255, 255);
     font-family: 'Lato', sans-serif;
-    /* position: relative; */
 }
 .hero::before { 
     content: ''; 
@@ -36,10 +34,8 @@ body {
     height: 125vh; 
     transform: rotate(-4deg); 
     transform-origin: bottom right;
-  
     z-index: -1; 
 } 
-
 
 .logo {
     height: 7rem;
@@ -51,11 +47,7 @@ body {
 }
 
 @media screen and (max-width:765px) {
-    body {
-        /* width: 375px; */
-    }
     .hero {
-        /* overflow: hidden; */
         width: 100vw;
     }
     .hero::before { 
@@ -74,19 +66,16 @@ body {
         z-index:-1; 
     } 
     h1 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
     .logo {
-        margin-top: 1em;
+        margin-top: 2em;
     }
 
     .writeUp {
         width: 22em;
     }
 
-    .phoneScan {
-        max-width: 18em;
-    }
 
 }
 
@@ -128,7 +117,3 @@ button a {
     color: rgb(219, 213, 213);
 }
 
-.phoneScan {
-    height: 22em;
-    margin: auto 1.3em;
-}
